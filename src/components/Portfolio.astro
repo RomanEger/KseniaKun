@@ -21,7 +21,7 @@ const allProjects: Project[] = projects;
       {allProjects.map((project) => (
         <div class="project-card" key={project.id}>
           <div class="project-image">
-            <img src={project.image} alt={project.title} loading="lazy" />
+            <img src={project.image} alt={project.title} />
             <div class="project-overlay">
               <a href={project.link} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                 View Project
