@@ -3,11 +3,16 @@ export const siteConfig = {
   subtitle: "Subtitle",
   description: "Портфолио и блог Ксении Кун",
   author: "Ксения Кун",
+
   email: "ksenia.kun02@gmail.com",
   telegram: "https://t.me/ksnkun",
   vk: "https://vk.com/ksnkun",
-  
-  // For Github Pages
+
+  contactsTitle: "Контакты",
+  contactsDescription: "Свяжитесь со мной с помощью Email, Telegram или VK",
+  mailto: "Или напишите прямо на почту",
+  mailtoButton: "Написать Email",
+
   baseUrl: "https://example.github.io",
 };
 

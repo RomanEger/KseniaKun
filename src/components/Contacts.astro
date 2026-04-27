@@ -1,0 +1,112 @@
+---
+import { siteConfig, socialLinks } from '../config/site';
+---
+
+<section id="contacts" class="contacts">
+  <div class="container">
+    <h2 class="section-title">{siteConfig.contactsTitle}</h2>
+    
+    <div class="contacts-content">
+      <p class="contacts-description">
+        {siteConfig.contactsDescription}
+      </p>
+
+      <div class="contacts-grid">
+        {socialLinks.map((link) => (
+          <a href={link.url} target="_blank" rel="noopener noreferrer" class="contact-link">
+            <img src={link.icon} width=24/>
+            <span class="contact-name">{link.name}</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="email-section">
+        <p>{siteConfig.mailto}</p>
+        <a href={`mailto:${siteConfig.email}`} class="btn btn-primary">
+          {siteConfig.mailtoButton}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contacts {
+    padding: var(--space-4xl) 0;
+    background-color: var(--color-dark);
+    color: white;
+  }
+
+  .section-title {
+    color: var(--color-accent);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .contacts-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contacts-description {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-2xl);
+    color: #e0e0e0;
+    line-height: 1.8;
+  }
+
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
+  }
+
+  .contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    background-color: rgba(212, 206, 148, 0.1);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+  }
+
+  .contact-link:hover {
+    background-color: rgba(212, 206, 148, 0.2);
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+  }
+
+  .contact-icon {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .contact-name {
+    color: var(--color-accent);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .email-section {
+    margin-top: var(--space-2xl);
+  }
+
+  .email-section p {
+    margin-bottom: var(--space-md);
+    color: #e0e0e0;
+  }
+
+  @media (max-width: 768px) {
+    .contacts {
+      padding: var(--space-3xl) 0;
+    }
+
+    .contacts-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: var(--space-md);
+    }
+  }
+</style>
