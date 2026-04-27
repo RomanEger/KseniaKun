@@ -13,7 +13,7 @@ export const siteConfig = {
   mailto: "Или напишите прямо на почту",
   mailtoButton: "Написать Email",
 
-  baseUrl: "https://example.github.io",
+  baseUrl: "https://romaneger.github.io",
 };
 
 export const socialLinks = [
